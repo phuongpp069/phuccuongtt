@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6, button, input, select, textarea {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
+/* Luxury accent borders and metallic sheen */
+.border-gold-subtle {
+  border-color: rgba(197, 163, 106, 0.35);
+}
+
+.bg-champagne-light {
+  background-color: #F6F1EA;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A87D43 0%, #D8B97C 50%, #9B6F32 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Safe area inset for mobile fixed bar */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}
