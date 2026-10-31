@@ -41,8 +41,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenRules }) => {
               Đại lý chính hãng phân phối thiết bị vệ sinh cao cấp TOTO Nhật Bản.
             </p>
 
-            <div className="text-xs text-neutral-300 mb-3 flex items-start gap-2">
-              <span className="text-[#D4B785] font-semibold shrink-0">Địa chỉ:</span>
+            <div className="text-xs text-neutral-300 mb-3 flex flex-col gap-0.5">
+              <span className="text-[#D4B785] font-semibold">📍 {brand.venueName || 'Siêu Thị Nội Thất Phú Cường'}</span>
               <span>{brand.address}</span>
             </div>
 

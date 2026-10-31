@@ -28,7 +28,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
             Khách Hàng Tại Showroom Phú Cường
           </h2>
           <p className="text-base sm:text-lg text-neutral-600 leading-relaxed">
-            Hình ảnh không gian trưng bày đạt chuẩn TOTO và khoảnh khắc khách hàng trực tiếp trải nghiệm tiện nghi thiết bị vệ sinh cao cấp tại Showroom TOTO Phú Cường (748 Nguyễn Văn Linh - P.Hiến Nam - TP.Hưng Yên).
+            Hình ảnh không gian trưng bày đạt chuẩn TOTO và khoảnh khắc khách hàng trực tiếp trải nghiệm tiện nghi thiết bị vệ sinh cao cấp tại Showroom TOTO Phú Cường (Siêu Thị Nội Thất Phú Cường - 748 Nguyễn Văn Linh, P. Phố Hiến, Hưng Yên).
           </p>
 
           {/* Filter Tabs */}

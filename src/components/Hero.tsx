@@ -52,13 +52,13 @@ export const Hero: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs uppercase tracking-wider text-neutral-500 block font-medium">
-                      Tổng giá trị 5 giải xác nhận
+                      Tổng giá trị giải thưởng & quà tặng
                     </span>
                     <span className="text-2xl sm:text-3xl font-extrabold text-[#800F21] block tracking-tight">
-                      {financialSummary.verifiedTotalValue}
+                      {financialSummary.totalClaimValue}
                     </span>
-                    <span className="text-[11px] text-neutral-500 mt-0.5 block leading-relaxed">
-                      Banner truyền thông lên đến {financialSummary.bannerClaimValue}
+                    <span className="text-[11px] text-neutral-600 mt-1 block leading-relaxed">
+                      {financialSummary.appreciationGiftNote}
                     </span>
                   </div>
                 </div>
@@ -76,7 +76,7 @@ export const Hero: React.FC = () => {
                       {timeline.dateDisplay}
                     </span>
                     <span className="text-[11px] sm:text-xs text-[#800F21] font-semibold mt-1 block">
-                      Showroom TOTO Phú Cường: {brand.address}
+                      📍 {brand.fullAddressDisplay || `${brand.venueName} - ${brand.address}`}
                     </span>
                   </div>
                 </div>
@@ -142,16 +142,7 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Floating Quick Feature Card */}
-            <div className="hidden sm:flex items-center gap-3 absolute -bottom-5 -left-5 bg-white/95 backdrop-blur-md border border-[#C5A36A]/50 rounded-xl p-3.5 shadow-lg max-w-xs">
-              <div className="w-10 h-10 rounded-full bg-[#800F21] flex items-center justify-center text-white shrink-0 font-extrabold text-base">
-                1st
-              </div>
-              <div className="text-left">
-                <p className="text-[11px] text-neutral-500 font-medium uppercase">Giải Đặc Biệt trị giá</p>
-                <p className="text-base font-extrabold text-[#800F21]">34.354.000 VNĐ</p>
-                <p className="text-[11px] text-[#35271F] font-semibold truncate">Bàn cầu 1 khối kèm Washlet</p>
-              </div>
-            </div>
+           
           </div>
 
         </div>

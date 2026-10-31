@@ -37,6 +37,8 @@ export interface CampaignConfig {
     websiteDomain: string;
     // Các trường tùy chọn: Chỉ hiển thị khi có thông tin chính thức
     address: string;
+    venueName?: string;
+    fullAddressDisplay?: string;
     fanpageUrl: string;
     zaloUrl: string;
     googleMapsUrl: string;
@@ -49,12 +51,10 @@ export interface CampaignConfig {
     timezone: string;
   };
   financialSummary: {
-    // Giá trị ghi trên banner truyền thông
-    bannerClaimValue: string; // "80.000.000 VNĐ"
-    // Tổng giá trị thực tế đã xác nhận của 5 giải thưởng (34.354.000 + 17.192.000 + 13.900.000 + 4.500.000 + 3.300.000 = 73.246.000)
-    verifiedTotalValue: string; // "73.246.000 VNĐ"
-    verifiedTotalNumber: number; // 73246000
-    discrepancyNote: string;
+    totalClaimValue: string;
+    fullClaimTitle: string;
+    shortClaimTitle: string;
+    appreciationGiftNote: string;
   };
   hero: {
     badge: string;
@@ -107,10 +107,12 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
     hotline: "tel:0912056534",
     hotlineDisplay: "0912 056 534",
     websiteDomain: "phucuongtt.com",
-    address: "748 Nguyễn Văn Linh - P.Hiến Nam - TP.Hưng Yên",
+    venueName: "Siêu Thị Nội Thất Phú Cường",
+    address: "748 Nguyễn Văn Linh, phường Phố Hiến, Hưng Yên",
+    fullAddressDisplay: "Siêu Thị Nội Thất Phú Cường - 748 Nguyễn Văn Linh, P. Phố Hiến, Hưng Yên",
     fanpageUrl: "",
     zaloUrl: "",
-    googleMapsUrl: "https://maps.google.com/?q=748+Nguyễn+Văn+Linh+Hiến+Nam+Hưng+Yên",
+    googleMapsUrl: "https://maps.google.com/?q=748+Nguyễn+Văn+Linh+phường+Phố+Hiến+Hưng+Yên",
   },
 
   timeline: {
@@ -122,17 +124,17 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
   },
 
   financialSummary: {
-    bannerClaimValue: "80.000.000 VNĐ",
-    verifiedTotalValue: "73.246.000 VNĐ",
-    verifiedTotalNumber: 73246000,
-    discrepancyNote: "Tổng giá trị 5 cơ cấu giải thưởng chính thức đã xác nhận là 73.246.000 VNĐ. Khẩu hiệu banner truyền thông ghi 'lên đến 80.000.000 VNĐ' (phần chênh lệch giải thưởng đang chờ xác nhận chi tiết từ ban tổ chức).",
+    totalClaimValue: "lên đến 80.000.000 VNĐ",
+    fullClaimTitle: "Tổng giá trị giải thưởng và quà tặng tri ân lên đến 80.000.000 VNĐ.",
+    shortClaimTitle: "Tổng giá trị lên đến 80.000.000 VNĐ.",
+    appreciationGiftNote: "Bên cạnh các giải bốc thăm, Phú Cường còn dành tặng quà tri ân cho khách hàng theo điều kiện của chương trình.",
   },
 
   hero: {
     badge: "CHƯƠNG TRÌNH TRI ÂN KHÁCH HÀNG",
     mainTitle: "MUA SẮM TẠI PHÚ CƯỜNG\nĐÓN CƠ HỘI TRÚNG QUÀ TOTO",
     subTitle: "BỐC THĂM TRÚNG THƯỞNG",
-    description: "Mua hàng hoặc sử dụng dịch vụ đủ điều kiện tại Showroom TOTO Phú Cường để nhận phiếu bốc thăm và cơ hội sở hữu bộ quà tặng thiết bị vệ sinh cao cấp chính hãng TOTO.",
+    description: "Mua hàng hoặc sử dụng dịch vụ đủ điều kiện tại Showroom TOTO Phú Cường để nhận phiếu bốc thăm và cơ hội sở hữu bộ quà tặng thiết bị vệ sinh cao cấp chính hãng TOTO. Bên cạnh các giải bốc thăm, Phú Cường còn dành tặng quà tri ân cho khách hàng theo điều kiện của chương trình.",
     bannerImage: "/assets/aistudio/Modern_bathroom_banner_with_seamless_mirror_reflection_abde5e4f.png",
     ctaPrimary: "Gọi tư vấn chương trình",
     ctaSecondary: "Khám phá giải thưởng",
@@ -387,15 +389,15 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
         points: [
           "Tên chương trình: TRI ÂN KHÁCH HÀNG – BỐC THĂM TRÚNG THƯỞNG",
           "Đơn vị tổ chức: SHOWROOM TOTO PHÚ CƯỜNG",
-          "Địa chỉ showroom: 748 Nguyễn Văn Linh - P.Hiến Nam - TP.Hưng Yên",
-          "Phạm vi áp dụng: Khách hàng mua sắm hàng hóa hoặc sử dụng dịch vụ tại Showroom TOTO Phú Cường (748 Nguyễn Văn Linh, P. Hiến Nam, TP. Hưng Yên).",
+          "Địa điểm tổ chức: Siêu Thị Nội Thất Phú Cường - 748 Nguyễn Văn Linh, phường Phố Hiến, Hưng Yên",
+          "Phạm vi áp dụng: Khách hàng mua sắm hàng hóa hoặc sử dụng dịch vụ tại Showroom TOTO Phú Cường (Siêu Thị Nội Thất Phú Cường, 748 Nguyễn Văn Linh, phường Phố Hiến, Hưng Yên).",
         ],
       },
       {
         heading: "2. Thời gian áp dụng",
         points: [
           "Thời gian phát hành phiếu: Từ ngày 01/11/2026 đến hết ngày 19/12/2026 (múi giờ Asia/Ho_Chi_Minh).",
-          "Thời gian bốc thăm: Được công bố cụ thể và tổ chức công khai tại Showroom TOTO Phú Cường (748 Nguyễn Văn Linh, P. Hiến Nam, TP. Hưng Yên) sau khi kết thúc thời gian phát hành phiếu.",
+          "Thời gian bốc thăm: Được công bố cụ thể và tổ chức công khai tại Showroom TOTO Phú Cường (Siêu Thị Nội Thất Phú Cường, 748 Nguyễn Văn Linh, phường Phố Hiến, Hưng Yên) sau khi kết thúc thời gian phát hành phiếu.",
         ],
       },
       {
@@ -414,8 +416,7 @@ export const CAMPAIGN_CONFIG: CampaignConfig = {
           "Giải Nhất (01 giải): Nắp rửa điện tử TOTO TCF33461GAA#NW1 - Trị giá 17.192.000 VNĐ",
           "Giải Nhì (01 giải): Sen cây nhiệt độ TOTO TBW11440V/TBW09010 - Trị giá 13.900.000 VNĐ",
           "Giải Ba (01 giải): Chậu treo kèm vòi nóng lạnh TOTO LHT333C#XW/TLS103A0V - Trị giá 4.500.000 VNĐ",
-          "Giải Khuyến Khích (01 giải): Sen nóng lạnh kèm bát sen TOTO TBS103B0V/TBW09000V - Trị giá 3.300.000 VNĐ",
-          "Tổng giá trị 5 giải thưởng danh mục đã xác nhận: 73.246.000 VNĐ. Giải thưởng không quy đổi thành tiền mặt.",
+          "Tổng giá trị giải thưởng và quà tặng tri ân lên đến 80.000.000 VNĐ. Bên cạnh các giải bốc thăm, Phú Cường còn dành tặng quà tri ân cho khách hàng theo điều kiện của chương trình. Giải thưởng không quy đổi thành tiền mặt.",
         ],
       },
       {

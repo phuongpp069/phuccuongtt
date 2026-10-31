@@ -44,8 +44,11 @@ export const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <span className="text-xs uppercase tracking-wider text-[#D4B785] font-semibold block">
-                      Địa chỉ Showroom Phú Cường
+                      Địa điểm & Địa chỉ
                     </span>
+                    <p className="text-sm font-semibold text-[#D4B785] mt-0.5">
+                      📍 {brand.venueName || 'Siêu Thị Nội Thất Phú Cường'}
+                    </p>
                     <p className="text-base sm:text-lg font-bold text-white mt-1 leading-snug">
                       {brand.address}
                     </p>

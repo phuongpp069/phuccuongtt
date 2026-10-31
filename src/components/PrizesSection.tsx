@@ -28,18 +28,11 @@ export const PrizesSection: React.FC<PrizesSectionProps> = ({ onSelectPrizeImage
             Toàn bộ giải thưởng là sản phẩm chính hãng TOTO 100%, bảo hành chính hãng toàn quốc, mang đến sự tiện nghi và đẳng cấp vượt trội cho ngôi nhà của bạn.
           </p>
 
-          {/* Transparent Total Prize Banner */}
-          <div className="mt-6 inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 bg-[#F4EFE6] border border-[#C5A36A]/40 rounded-xl px-5 py-3 text-sm text-[#35271F]">
-            <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#800F21]" />
-              <span className="font-semibold">Tổng giá trị 5 giải thưởng chính thức:</span>
-              <span className="font-extrabold text-[#800F21] text-base sm:text-lg">
-                {financialSummary.verifiedTotalValue}
-              </span>
-            </div>
-            <span className="text-xs text-neutral-500 hidden sm:inline">•</span>
-            <span className="text-xs text-neutral-500">
-              (Banner truyền thông: {financialSummary.bannerClaimValue})
+          {/* Total Prize & Gift Banner */}
+          <div className="mt-6 inline-flex items-center gap-2.5 bg-[#F4EFE6] border border-[#C5A36A]/40 rounded-xl px-5 py-3 text-sm text-[#35271F] shadow-xs">
+            <Award className="w-5 h-5 text-[#800F21]" />
+            <span className="font-semibold text-sm sm:text-base">
+              Tổng giá trị giải thưởng và quà tặng tri ân <strong className="text-[#800F21] font-extrabold text-base sm:text-lg">lên đến 80.000.000 VNĐ</strong>
             </span>
           </div>
         </div>
@@ -208,8 +201,8 @@ export const PrizesSection: React.FC<PrizesSectionProps> = ({ onSelectPrizeImage
         <div className="mt-12 max-w-4xl mx-auto bg-[#F4EFE6]/70 border border-[#C5A36A]/30 rounded-xl p-4 sm:p-5 flex items-start gap-3.5 text-xs sm:text-sm text-neutral-700">
           <Info className="w-5 h-5 text-[#C5A36A] shrink-0 mt-0.5" />
           <div>
-            <span className="font-semibold text-[#35271F]">Ghi chú về cơ cấu giải thưởng: </span>
-            {financialSummary.discrepancyNote} Toàn bộ sản phẩm trúng thưởng được bàn giao nguyên đai nguyên kiện với phiếu bảo hành chính hãng TOTO Việt Nam.
+            <span className="font-semibold text-[#35271F]">Quà tặng tri ân: </span>
+            {financialSummary.appreciationGiftNote} Toàn bộ sản phẩm trúng thưởng được bàn giao nguyên đai nguyên kiện với phiếu bảo hành chính hãng TOTO Việt Nam.
           </div>
         </div>
 

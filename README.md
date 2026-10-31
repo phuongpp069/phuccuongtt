@@ -13,8 +13,10 @@ Nền tảng triển khai: GitHub + Vercel / Cloudflare Pages / Static Hosting
 - **100% Thuần Tĩnh (Static)**: Không cần backend, cơ sở dữ liệu hay tài khoản quản trị. Tốc độ tải trang siêu tốc, bảo mật tuyệt đối, chi phí vận hành $0 trên Vercel.
 - **Tập Trung Cấu Hình Duy Nhất**: Toàn bộ nội dung, số điện thoại, ngày giờ, cơ cấu giải thưởng, điều kiện tham gia và hình ảnh đều nằm tại:
 - **Tập Trung Cấu Hình Duy Nhất**: Toàn bộ nội dung, số điện thoại, ngày giờ, cơ cấu giải thưởng, điều kiện tham gia và hình ảnh đều nằm tại:
-  `src/config/campaign.ts`
-- **Địa Chỉ Showroom Chính Thức**: `748 Nguyễn Văn Linh - P.Hiến Nam - TP.Hưng Yên` (tích hợp đầy đủ trên Hero, phần liên hệ, bản đồ Google Maps, thể lệ và chân trang).
+- **Địa Chỉ Showroom Chính Thức**:
+  📍 **Siêu Thị Nội Thất Phú Cường**  
+  748 Nguyễn Văn Linh, phường Phố Hiến, Hưng Yên  
+  ☎️ Hotline: 0912 056 534
 - **Font Chữ Chuẩn Tiếng Việt Cao Cấp (Inter)**:
   `font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;`
   Đảm bảo 100% hiển thị hoàn hảo dấu tiếng Việt Unicode, không bao giờ bị lỗi font (tofu), nhảy dòng hay lệch dấu trên mọi màn hình máy tính và điện thoại.
@@ -113,16 +115,9 @@ git push -u origin main
 
 Trong quá trình chuẩn hóa dữ liệu, có một số điểm kỹ thuật cần chủ showroom xác nhận lại:
 
-1. **Chênh lệch tổng giá trị giải thưởng**:
-   - Banner truyền thông ghi: *"TỔNG GIÁ TRỊ GIẢI THƯỞNG LÊN ĐẾN 80.000.000 VNĐ"*.
-   - Tổng cộng giá trị thực tế của 5 giải thưởng danh mục đã công bố:
-     - Giải Đặc Biệt: `34.354.000 VNĐ`
-     - Giải Nhất: `17.192.000 VNĐ`
-     - Giải Nhì: `13.900.000 VNĐ`
-     - Giải Ba: `4.500.000 VNĐ`
-     - Giải Khuyến Khích: `3.300.000 VNĐ`
-     - **Tổng cộng**: `73.246.000 VNĐ` (Chênh lệch: `6.754.000 VNĐ`).
-   - *Khuyến nghị*: Xác nhận lại xem 6.754.000 VNĐ này là các giải phụ/quà tặng check-in showroom chưa liệt kê mã, hay là làm tròn truyền thông, để cập nhật chính xác vào `src/config/campaign.ts`.
+1. **Tổng giá trị giải thưởng và quà tặng tri ân**:
+   - Đã thống nhất toàn bộ hiển thị trên website: *"Tổng giá trị giải thưởng và quà tặng tri ân lên đến 80.000.000 VNĐ."* (hoặc *"Tổng giá trị lên đến 80.000.000 VNĐ."*).
+   - Đã bổ sung thông điệp tri ân: *"Bên cạnh các giải bốc thăm, Phú Cường còn dành tặng quà tri ân cho khách hàng theo điều kiện của chương trình."* nhằm giải thích trọn vẹn và liền mạch cơ cấu quà tặng.
 
 2. **Thời gian và hình thức tổ chức bốc thăm**:
    - Cần bổ sung ngày giờ tổ chức buổi lễ quay số chính xác (ví dụ: ngày 20/12/2026 lúc mấy giờ) và hình thức (trực tiếp tại showroom hay có livestream fanpage).

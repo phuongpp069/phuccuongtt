@@ -85,10 +85,13 @@ export const ConditionsSection: React.FC<ConditionsSectionProps> = ({ onOpenRule
             </div>
             <div className="flex-1">
               <h4 className="text-base sm:text-lg font-bold text-[#800F21] mb-1">
-                Giới Hạn Số Lượng Phiếu Tham Gia
+                Giới Hạn Số Lượng Phiếu & Quà Tặng Tri Ân
               </h4>
               <p className="text-sm sm:text-base text-neutral-800 leading-relaxed font-medium">
                 {conditions.maxTicketsNotice}
+              </p>
+              <p className="text-xs sm:text-sm text-[#800F21] font-semibold mt-2">
+                🎁 Bên cạnh các giải bốc thăm, Phú Cường còn dành tặng quà tri ân cho khách hàng theo điều kiện của chương trình.
               </p>
               <p className="text-xs text-neutral-600 mt-2">
                 {conditions.disclaimer}
