@@ -8,7 +8,11 @@ interface GallerySectionProps {
 
 export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto }) => {
   const { showroomPhotos } = CAMPAIGN_CONFIG;
-  const [filter, setFilter] = useState<'all' | 'customer' | 'showroom'>('all');
+  const [filter, setFilter] = useState<'all' | 'showroom' | 'customer' | 'certificate'>('all');
+
+  const showroomCount = showroomPhotos.filter(p => p.category === 'showroom').length;
+  const customerCount = showroomPhotos.filter(p => p.category === 'customer').length;
+  const certificateCount = showroomPhotos.filter(p => p.category === 'certificate').length;
 
   const filteredPhotos = filter === 'all'
     ? showroomPhotos
@@ -32,7 +36,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
           </p>
 
           {/* Filter Tabs */}
-          <div className="flex items-center justify-center gap-2 mt-6">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 mt-6">
             <button
               onClick={() => setFilter('all')}
               className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
@@ -44,16 +48,6 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
               Tất cả ({showroomPhotos.length})
             </button>
             <button
-              onClick={() => setFilter('customer')}
-              className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                filter === 'customer'
-                  ? 'bg-[#800F21] text-white shadow-sm'
-                  : 'bg-white text-neutral-700 hover:bg-[#FAF7F2] border border-[#C5A36A]/30'
-              }`}
-            >
-              Trải nghiệm thực tế
-            </button>
-            <button
               onClick={() => setFilter('showroom')}
               className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 filter === 'showroom'
@@ -61,7 +55,27 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
                   : 'bg-white text-neutral-700 hover:bg-[#FAF7F2] border border-[#C5A36A]/30'
               }`}
             >
-              Không gian trưng bày
+              Không gian trưng bày ({showroomCount})
+            </button>
+            <button
+              onClick={() => setFilter('customer')}
+              className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                filter === 'customer'
+                  ? 'bg-[#800F21] text-white shadow-sm'
+                  : 'bg-white text-neutral-700 hover:bg-[#FAF7F2] border border-[#C5A36A]/30'
+              }`}
+            >
+              Trải nghiệm thực tế ({customerCount})
+            </button>
+            <button
+              onClick={() => setFilter('certificate')}
+              className={`px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                filter === 'certificate'
+                  ? 'bg-[#800F21] text-white shadow-sm'
+                  : 'bg-white text-neutral-700 hover:bg-[#FAF7F2] border border-[#C5A36A]/30'
+              }`}
+            >
+              Chứng nhận chính hãng ({certificateCount})
             </button>
           </div>
         </div>
